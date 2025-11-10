@@ -34,7 +34,7 @@ import sectionFive from "@/components/sectionFive.vue";
 <style scoped>
 .section-one {
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   background-image: url(../assets/imgs/body-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,11 +44,12 @@ import sectionFive from "@/components/sectionFive.vue";
   justify-content: space-between;
   align-items: center;
   gap: clamp(3rem, 5vw, 10rem);
+  overflow-x: hidden;
 }
 
 .section-hero {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100svh;
   position: relative;
   pointer-events: none;
 }
@@ -60,8 +61,8 @@ import sectionFive from "@/components/sectionFive.vue";
 }
 
 .section-three {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,10 +103,10 @@ import sectionFive from "@/components/sectionFive.vue";
 .section-five {
   margin: 0 auto;
   width: 80vw;
-  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding: 55px;
 }
 
@@ -122,9 +123,8 @@ import sectionFive from "@/components/sectionFive.vue";
   }
 }
 
-@media (width <= 768px) {
+@media (width <= 992px) {
   .section-five {
-    flex-direction: column;
     padding: 55px 0;
     gap: 55px;
   }

@@ -1,50 +1,49 @@
 <script setup>
-import { RouterLink } from 'vue-router';
-import { ref, onMounted , onBeforeUnmount} from 'vue';
-import directionDown from './icons/direction-down.vue';
+import { RouterLink } from "vue-router";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import directionDown from "./icons/direction-down.vue";
 
 const isHidden = ref(false);
 let lastScrollY = window.scrollY;
 
-const handleScroll = ()=> {
+const handleScroll = () => {
   const currentScrollY = window.scrollY;
-  if ( currentScrollY > window.innerHeight ) {
-    isHidden.value = currentScrollY > lastScrollY
+  if (currentScrollY > window.innerHeight) {
+    isHidden.value = currentScrollY > lastScrollY;
   } else {
-    isHidden.value = false
+    isHidden.value = false;
   }
-  lastScrollY = currentScrollY
-}
+  lastScrollY = currentScrollY;
+};
 
-const mobileNav = ref('close');
+const mobileNav = ref("close");
 let showNavButton = null;
 let mobileNavMenu = null;
 
 onMounted(() => {
-  showNavButton = document.querySelector('.show-nav-button');
-  mobileNavMenu = document.querySelector('.mobile-navbar-menu');
+  showNavButton = document.querySelector(".show-nav-button");
+  mobileNavMenu = document.querySelector(".mobile-navbar-menu");
 
   if (showNavButton && mobileNavMenu) {
-    showNavButton.addEventListener('click', () => {
-      if (mobileNav.value === 'close') {
-        mobileNavMenu.classList.add('show-mobile-nav');
-        mobileNavMenu.classList.remove('close-mobile-nav');
-        mobileNav.value = 'open';
+    showNavButton.addEventListener("click", () => {
+      if (mobileNav.value === "close") {
+        mobileNavMenu.classList.add("show-mobile-nav");
+        mobileNavMenu.classList.remove("close-mobile-nav");
+        mobileNav.value = "open";
       } else {
-        mobileNavMenu.classList.add('close-mobile-nav');
-        mobileNavMenu.classList.remove('show-mobile-nav');
-        mobileNav.value = 'close';
+        mobileNavMenu.classList.add("close-mobile-nav");
+        mobileNavMenu.classList.remove("show-mobile-nav");
+        mobileNav.value = "close";
       }
     });
   }
 
-  window.addEventListener('scroll', handleScroll);
-}
-);
+  window.addEventListener("scroll", handleScroll);
+});
 
-onBeforeUnmount(()=> {
-  window.removeEventListener('scroll' ,handleScroll);
-})
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
@@ -55,7 +54,7 @@ onBeforeUnmount(()=> {
     </div>
   </section>
 
-  <nav class="header" :class="{ hide : isHidden }">
+  <nav class="header" :class="{ hide: isHidden }">
     <router-link to="/" class="link">Home</router-link>
     <router-link to="/About" class="link">About</router-link>
     <router-link to="/Portfolios" class="link">Portfolios</router-link>
@@ -65,7 +64,7 @@ onBeforeUnmount(()=> {
 
 <style>
 .mobile-navbar {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -78,11 +77,7 @@ onBeforeUnmount(()=> {
 .mobile-navbar-menu {
   width: 300px;
   border-radius: 24px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2)
-  );
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(1rem);
   overflow: hidden;
   position: absolute;
@@ -93,11 +88,7 @@ onBeforeUnmount(()=> {
   width: 144px;
   height: 34px;
   border-radius: 4px 4px 24px 24px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.2)
-  );
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
   backdrop-filter: blur(1rem);
   display: flex;
   justify-content: center;
@@ -161,11 +152,11 @@ onBeforeUnmount(()=> {
   cursor: pointer;
   z-index: 99;
   position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -187,7 +178,6 @@ onBeforeUnmount(()=> {
   }
 }
 
-/* Responsive rules */
 @media (min-width: 553px) {
   .mobile-navbar {
     display: none;

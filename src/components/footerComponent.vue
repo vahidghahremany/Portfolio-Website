@@ -33,7 +33,7 @@ console.log("user => ", user);
 
 <style scoped>
 .footer {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -74,7 +74,7 @@ console.log("user => ", user);
 
 .col-two .line {
   height: 2px;
-  background-color: #fff;
+  background-color: var(--light-color);
 }
 
 @media (width <= 768px) {

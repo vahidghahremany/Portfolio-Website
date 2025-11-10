@@ -135,24 +135,19 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .small-container {
-  width: 85vw;
+  width: 85svw;
   height: 80%;
 
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glassy-bg);
+  backdrop-filter: var(--glassy-filter);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
   display: flex;
   gap: 34px;
   padding: 34px;
-  color: var(--textColor);
   z-index: 999;
   scrollbar-width: none;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 154px;
-    corner-shape: squircle;
-  }
+  border-radius: 89px;
 }
 
 .box-col {
@@ -176,11 +171,7 @@ onBeforeUnmount(() => {
   padding: 34px;
   opacity: 0;
   transform: translateY(50px);
-
-  @supports (corner-shape: squircle) {
-    border-radius: 130px;
-    corner-shape: squircle;
-  }
+  border-radius: 55px;
 }
 
 .fadeUp {

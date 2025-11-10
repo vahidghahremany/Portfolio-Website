@@ -131,13 +131,13 @@ onBeforeUnmount(() => {
 }
 
 .title-group h2 {
-  font-size: 55px;
+  font-size: clamp(34px, 2vw, 55px);
   font-family: "fontOne", sans-serif;
   margin: 0;
 }
 
 .title-group p {
-  font-size: 21px;
+  font-size: clamp(16px, 2vw, 21px);
   line-height: 37px;
   font-family: "fontTwoThin", sans-serif;
   text-align: center;
@@ -145,7 +145,7 @@ onBeforeUnmount(() => {
 }
 
 .portfolios-card {
-  width: 80vw;
+  width: 80svw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,10 +156,10 @@ onBeforeUnmount(() => {
 
 .portfolios-card .card {
   width: 320px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glassy-bg);
+  backdrop-filter: var(--glssy-filter);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -169,11 +169,7 @@ onBeforeUnmount(() => {
   border-radius: 20px;
   overflow: hidden;
   transition: transform 280ms ease;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 89px;
-    corner-shape: squircle;
-  }
+  border-radius: 55px;
 }
 
 .portfolios-card .card:hover {
@@ -187,11 +183,7 @@ onBeforeUnmount(() => {
   background-size: cover;
   background-position: center;
   flex-shrink: 0;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 76px;
-    corner-shape: squircle;
-  }
+  border-radius: 39px;
 }
 
 .portfolios-card .card .card-content {
@@ -200,7 +192,7 @@ onBeforeUnmount(() => {
   align-items: start;
   justify-content: center;
   gap: 13px;
-  color: #fff;
+  color: var(--light-color);
   padding: 16px;
 }
 
@@ -217,40 +209,29 @@ onBeforeUnmount(() => {
   padding: 6px 10px;
   font-family: "fontTwo", sans-serif;
   font-size: 13px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.02);
+  border: var(--btn-border);
+  border-radius: 34px;
 }
 
-/* توضیحات */
 .description-row p {
   font-family: "fontTwo", sans-serif;
   margin: 0;
   font-size: 15px;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
-  .title-group h2 {
-    font-size: 42px;
-  }
-
   .portfolios-card .card {
     width: 90%;
     max-width: 420px;
   }
 
   .portfolios-card {
-    width: 94vw;
+    width: 94svw;
   }
 }
 
 @media (max-width: 480px) {
-  .title-group h2 {
-    font-size: 30px;
-  }
   .title-group p {
-    font-size: 16px;
     line-height: 24px;
   }
   .portfolios-card .card .img {

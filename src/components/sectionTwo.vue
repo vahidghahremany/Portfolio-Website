@@ -94,14 +94,14 @@ onBeforeUnmount(() => {
   padding: 8px 13px;
   font-size: clamp(8px, 1.2vw, 16px);
   font-family: "fontTwo", sans-serif;
-  border: 1px solid #fff;
+  border: var(--btn-border);
   border-radius: 44px;
   transition: 0.3s;
 }
 
 .tag:hover {
-  color: black;
-  background-color: #fff;
+  color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 .section-title {
@@ -113,7 +113,7 @@ onBeforeUnmount(() => {
   font-family: "fontTwo", sans-serif;
   line-height: 38px;
   font-size: clamp(13px, 2vw, 18px);
-  color: #a8a8a8;
+  color: var(--light-gray);
 }
 
 .img-col {
@@ -128,11 +128,7 @@ onBeforeUnmount(() => {
   background-image: url(../assets/imgs/vahid.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 144px;
-    corner-shape: squircle;
-  }
+  border-radius: 89px;
 }
 
 @media (552px < width <= 992px) {

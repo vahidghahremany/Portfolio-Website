@@ -63,10 +63,10 @@ onBeforeUnmount(() => {
 
 .content-side {
   width: 650px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: var(--glassy-bg);
+  backdrop-filter: var(--glssy-filter);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
   scale: 1;
   transition: all 0.5s ease;
   display: flex;
@@ -74,13 +74,9 @@ onBeforeUnmount(() => {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  color: #fff;
+  color: var(--light-color);
   padding: 2rem;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 89px;
-    corner-shape: squircle;
-  }
+  border-radius: 64px;
 }
 
 .content-side h4 {
@@ -107,15 +103,14 @@ onBeforeUnmount(() => {
 
 input#message {
   height: 150px;
-
-  @supports (corner-shape: squircle) {
-    border-radius: 65px;
-    corner-shape: squircle;
-  }
+  border-radius: 55px;
 }
 
-@media (width <= 768px) {
+@media (width <= 992px) {
   .content-side {
+    width: 100%;
+  }
+  .img-side {
     width: 100%;
   }
 }

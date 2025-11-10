@@ -60,28 +60,24 @@ onMounted(() => {
 
 .right-side-content {
   padding: 1.6rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
-  @supports (corner-shape: squircle) {
-    border-radius: 89px;
-    corner-shape: squircle;
-  }
+  background: var(--glassy-bg);
+  backdrop-filter: var(--glassy-filter);
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: 55px;
 }
 
 .left-side h3 {
   font-size: clamp(34px, 144px, 144px);
   font-family: "fontOne";
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--text-shadow);
 }
 
 h1 {
   font-size: clamp(34px, 144px, 55px);
   font-family: "fontOne", sans-serif;
   margin-bottom: 13px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--text-shadow);
   color: #d3d3d3;
 }
 
@@ -90,7 +86,7 @@ h1 {
   font-size: 21px;
   line-height: 27.3px;
   margin-bottom: 21px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: var(--text-shadow);
 }
 
 @media (992px < width <= 1100px) {
@@ -128,7 +124,7 @@ h1 {
 
 @media (width < 390px) {
   .right-side {
-    padding: 0 1rem;
+    padding: 0 8px;
   }
   .right-side p {
     line-height: 30px;
