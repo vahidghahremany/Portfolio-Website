@@ -24,15 +24,21 @@ This portfolio was intentionally developed **without Bootstrap, Tailwind, GSAP, 
 
 ## 🧠 Key Features
 
-| Feature | Description |
-|--------|-------------|
-| **Vue 3 + Composition API** | Logical and reusable component structure. |
-| **Vue Router** | Clean and dynamic page navigation. |
-| **Custom CSS (No UI Library)** | Fully handcrafted responsive layout. |
-| **Mobile-first Responsive** | Optimized UI for all screen sizes. |
-| **Custom Animations** | Smooth reveal effects, transitions, and scroll-based motion designed manually. |
-| **Clean Component Structure** | Clear folder organization and reusability. |
-| **Semantic HTML + SEO Friendly** | Structured content for better indexing. |
+| Feature                          | Description                                                                    |
+| -------------------------------- | ------------------------------------------------------------------------------ |
+| **Vue 3 + Composition API**      | Logical and reusable component structure.                                      |
+| **Vue Router**                   | Clean and dynamic page navigation.                                             |
+| **Custom CSS (No UI Library)**   | Fully handcrafted responsive layout.                                           |
+| **Mobile-first Responsive**      | Optimized UI for all screen sizes.                                             |
+| **Custom Animations**            | Smooth reveal effects, transitions, and scroll-based motion designed manually. |
+| **Clean Component Structure**    | Clear folder organization and reusability.                                     |
+| **Semantic HTML + SEO Friendly** | Structured content for better indexing.                                        |
+
+---
+
+## 🎬 Live Preview
+
+<video src="https://github.com/user-attachments/assets/dd7861f3-c327-4f93-9202-116f7dee0704" controls width="600"></video>
 
 ---
 
