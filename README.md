@@ -38,7 +38,7 @@ This portfolio was intentionally developed **without Bootstrap, Tailwind, GSAP, 
 
 ## 🎬 Live Preview
 
-<video src="https://github.com/user-attachments/assets/dd7861f3-c327-4f93-9202-116f7dee0704" controls width="600"></video>
+<video src="https://github.com/user-attachments/assets/6bf085ed-ef3e-495c-b073-bc6c9e9624ac" controls width="600"></video>
 
 ---
 
